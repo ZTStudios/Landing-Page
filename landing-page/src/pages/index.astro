@@ -1,22 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Content from '../layouts/Content.astro'
+import Navbar from '../components/Navbar.astro';
 ---
 
 <Layout title="ZT Studios">
 	<main>
-		
+		<Content>
+			<Navbar />
+		</Content>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
+		width: 100%;
+		height: 400dvh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+		background: #03021B;
 	}
 </style>
