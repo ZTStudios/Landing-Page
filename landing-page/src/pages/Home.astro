@@ -1,0 +1,21 @@
+---
+import Content from '../layouts/Content.astro'
+import Navbar from '../components/Navbar.astro';
+---
+
+<section class="HomeScreen">
+  <Content>
+    <Navbar />
+  </Content>
+</section>
+<style>
+  .HomeScreen {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-image: url('../assets/background.svg');
+		background-repeat: no-repeat;
+  }
+</style>

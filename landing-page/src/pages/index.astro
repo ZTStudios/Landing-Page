@@ -1,14 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Content from '../layouts/Content.astro'
-import Navbar from '../components/Navbar.astro';
+import HomeScreen from '../pages/Home.astro'
 ---
 
 <Layout title="ZT Studios">
 	<main>
-		<Content>
-			<Navbar />
-		</Content>
+		<HomeScreen />
 	</main>
 </Layout>
 
@@ -19,7 +16,6 @@ import Navbar from '../components/Navbar.astro';
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 1rem;
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
