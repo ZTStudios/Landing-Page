@@ -6,6 +6,11 @@ import Navbar from '../components/Navbar.astro';
 <section class="HomeScreen">
   <Content>
     <Navbar />
+    <div class="infoSection">
+      <h2>Transforma, mejora y evoluciona</h2>
+      <button>Solitar cotizacion</button>
+    </div>
+
   </Content>
 </section>
 <style>
@@ -17,5 +22,11 @@ import Navbar from '../components/Navbar.astro';
     padding: 1rem;
     background-image: url('../assets/background.svg');
 		background-repeat: no-repeat;
+  }
+
+  .infoSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 </style>
