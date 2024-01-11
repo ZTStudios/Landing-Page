@@ -1,16 +1,21 @@
 ---
 import Content from '../layouts/Content.astro'
 import Navbar from '../components/Navbar.astro';
+import Bento from '../components/Bento.astro';
+import SocialMedia from '../components/SocialMedia.astro';
 ---
 
 <section class="HomeScreen">
   <Content>
     <Navbar />
     <div class="infoSection">
-      <h2>Transforma, mejora y evoluciona</h2>
-      <button>Solitar cotizacion</button>
+      <article class="infoText">
+        <h2 class="titleHome">Transforma, mejora y evoluciona</h2>
+        <button class="buttonCotizacion">Solitar cotizacion</button>
+      </article>
+      <Bento />
     </div>
-
+    <SocialMedia />
   </Content>
 </section>
 <style>
@@ -19,14 +24,42 @@ import Navbar from '../components/Navbar.astro';
     height: 100dvh;
     display: flex;
     justify-content: center;
-    padding: 1rem;
     background-image: url('../assets/background.svg');
 		background-repeat: no-repeat;
+    position: relative;
   }
 
   .infoSection {
     width: 100%;
+    height: 65%;
     display: flex;
     justify-content: space-between;
+  }
+
+  .infoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .titleHome {
+    max-width: 10ch;
+    font-size: 4rem;
+    line-height: 76px;
+    font-weight: 600;
+    text-wrap: balance;
+    letter-spacing: 0.76px;
+  }
+
+  .buttonCotizacion {
+    padding: 12px 50px;
+    border-radius: 50px;
+    color: black;
+    background: linear-gradient(90deg, #DFE9F3 0%, #FFF 100%);
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    font-size: 1.15rem;
+    width: fit-content;
   }
 </style>

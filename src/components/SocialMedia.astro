@@ -1,0 +1,84 @@
+---
+import { ChevronDown } from 'lucide-astro'
+import { Github, Facebook, Instagram } from 'simple-icons-astro'
+
+---
+<div class="wrapper">
+  <section class="containerSocialMedia">
+    <div class="containerNextSection">
+      <ChevronDown />
+      <span class="nameSocial">Cotizaciones</span>
+    </div>
+    <ul class="list">
+      <li class="item">
+        <span class="nameSocial">@ZT Studios</span>
+      </li>
+      <li class="divider" ></li>
+      <li class="item">
+        <Github class="iconSocial" />
+      </li>
+      <li class="divider" ></li>
+      <li class="item">
+        <Facebook class="iconSocial" />
+      </li>
+      <li class="divider" ></li>
+      <li class="item">
+        <Instagram class="iconSocial" />
+      </li>
+    </ul>
+  </section>
+</div>
+<style>
+
+  .wrapper {
+    width: 125%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(54, 54, 54, 0.10);
+    background: rgba(54, 54, 54, 0.45);
+    backdrop-filter: blur(14px);
+    height: 8%;
+  }
+
+  .containerNextSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    gap: 8px;
+  }
+
+  .containerSocialMedia {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: space-between;
+  }
+
+  .divider {
+    width: 1px;
+    height: auto;
+    background-color: white;
+    border-radius: 2px;
+  }
+
+  .list {
+    display: flex;
+    gap: 12px;
+  }
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconSocial {
+    width: 20px;
+  }
+
+  .nameSocial {
+    font-size: 0.875rem;
+  }
+</style>
