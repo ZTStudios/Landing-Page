@@ -1,15 +1,6 @@
 ---
 import ContentNormal from "../layouts/ContentNormal.astro"
 import CardPlans from "../components/CardPlans.astro"
-
-const optionsLanding = [
-  'Reuniones Preliminares',
-  'Diseño UI / UX',
-  'Prototipo',
-  'Hosting',
-  'Diseño responsivo',
-  'Dominio personalizado'
-]
 ---
 
 <section class="backgroundMain">
@@ -20,9 +11,18 @@ const optionsLanding = [
       <CardPlans 
       title="Página de Conversión" 
       description="Requieres de un portafolio, exponenciar tu negocio o marca, esto es lo que necesitas."
-      options={optionsLanding} />
-      <CardPlans />
-      <CardPlans />
+      active={false} 
+      />
+      <CardPlans 
+        title="Desarrollo a tu medida"
+        description="Si buscas una solucion a un problema, optimizar procesos o mejorar tu productividad."
+        active={true}
+      />
+      <CardPlans 
+        title="Capacitacion"
+        description="Introduccion a tecnologias que podrias implementar, para seguir actualizando."
+        active={false}
+      />
     </section>
   </ContentNormal>
 </section>
