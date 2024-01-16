@@ -3,6 +3,7 @@ import Content from '../layouts/Content.astro'
 import Navbar from '../components/Navbar.astro';
 import Bento from '../components/Bento.astro';
 import SocialMedia from '../components/SocialMedia.astro';
+import Cotizaciones from './Cotizaciones.astro';
 ---
 
 <section class="HomeScreen">
@@ -11,13 +12,14 @@ import SocialMedia from '../components/SocialMedia.astro';
     <div class="infoSection">
       <article class="infoText">
         <h2 class="titleHome">Transforma, mejora y evoluciona</h2>
-        <button class="buttonCotizacion">Solitar cotizacion</button>
+        <button class="buttonCotizacion">Solitar tu cotizacion</button>
       </article>
       <Bento />
     </div>
     <SocialMedia />
   </Content>
 </section>
+<Cotizaciones />
 <style>
   .HomeScreen {
     width: 100%;
