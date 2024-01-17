@@ -1,0 +1,189 @@
+---
+import ContentNormal from "../layouts/ContentNormal.astro"
+import { Mail } from "lucide-astro";
+import { Facebook, Whatsapp } from "simple-icons-astro";
+---
+
+<section class="backgroundMain">
+  <div class="blurCircle" style="left: -150px;" />
+  <div class="blurCircle" style="right: -150px; bottom: 0;" />
+  <div class="blurCircle" style="right: 250px;" />
+  <div class="blurCircle" style="top: 120px;" />
+  <ContentNormal>
+    <section style="display: flex; justify-content: space-between; width: 100%;">
+      <aside style="z-index: 1;">
+        <div>
+          <h3 class="titleInfo">Desata el potencial con un desarrollo a la personalizado para ti</h3>
+          <section>
+            <h5 class="subtitle">Tambien nos puedes contactar en:</h5>
+            <div class="iconsContent">
+              <div class="iconData">
+                <Mail />
+              </div>
+              <div class="iconData" style="background-color: #466dce;">
+                <Facebook />
+              </div>
+              <div class="iconData" style="background-color: #57B24F;">
+                <Whatsapp />
+              </div>
+            </div>
+          </section>
+        </div>
+      </aside>
+      <article class="cardContact">
+        <header>
+          <h6 class="titleForm">Te contactamos nosotros</h6>
+          <p class="subtitleForm">Llena el siguiente formulario, para poder comunicarnos contigo.</p>
+        </header>
+        <div />
+        <form class="formContainer">
+          <div class="entryInfoContainer">
+            <label>Nombre</label>
+            <input  placeholder="Ingresa tu nombre"/>
+          </div>
+          <div class="entryInfoContainer">
+            <label>Apellido</label>
+            <input  placeholder="Ingresa tu nombre"/>
+          </div>
+          <div class="entryInfoContainer">
+            <label>Telefono</label>
+            <input  placeholder="Ingresa tu nombre"/>
+          </div>
+          <div class="entryInfoContainer">
+            <label>Email</label>
+            <input  placeholder="Ingresa tu nombre"/>
+          </div>
+          <div class="entryInfoContainer">
+            <label>Tipo de cotizacion</label>
+            <select>
+              <option disabled selected value="">Selecciona un plan</option>
+              <option>Landing Page</option>
+              <option>Desarrollo a medida</option>
+              <option>Capacitacion</option>
+            </select>
+          </div>
+          <button>Solicitar Cotizacion</button>
+        </form>
+      </article>
+    </section>
+  </ContentNormal>
+</section>
+<style>
+
+  .backgroundMain {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    background-color: #03021B;
+    background-image: radial-gradient(#19112f 1.4000000000000001px, #03021B 1.4000000000000001px);
+    background-size: 28px 28px;
+  }
+
+  .blurCircle {
+    position: absolute;
+    width: 30%;
+    height: 35%;
+    border-radius: 681px;
+    background: #652AC6;
+    filter: blur(500px); 
+    z-index: 0;
+  }
+
+  .cardContact {
+    padding: 24px;
+    border-radius: 16px;
+    background: rgba(69, 69, 69, 0.14);
+    backdrop-filter: blur(15px);
+    z-index: 1;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px 0px;
+  }
+
+  .entryInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .titleInfo {
+    max-width: 25ch;
+    text-wrap: balance;
+    color: #FFF;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    z-index: 5;
+  }
+
+  .subtitle {
+    color: #AAA9AB;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .titleForm {
+    color: #FFF;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .subtitleForm {
+    color: #ADADAD;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .iconsContent {
+    padding: 8px 0px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .iconData {
+    width: 45px;
+    height: 45px;
+    background-color: #8D20E4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input, select {
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 8px;
+    border-radius: 8px;
+    color: #ADADAD;
+    background: #fcfcfc;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  button {
+    padding: 8px 0px;
+    border-radius: 8px;
+    border: 0.5px solid #652AC6;
+    background: linear-gradient(90deg, #652AC6 0%, #B14DFF 100%);
+    box-shadow: 0px 0px 50px 0px #652AC6;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+</style>
