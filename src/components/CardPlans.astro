@@ -1,4 +1,5 @@
 ---
+  import { Check } from 'lucide-astro'
   const { title, description, options, active } = Astro.props
 
   const optionsCapacitacion = [
@@ -44,13 +45,18 @@ title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow =
     <ul>
       {
         optionsToShow.map((value) => (
-          <li class="optionCards">{value}</li>
+          <li class="optionCards"><Check class="iconList"  />{value}</li>
         ))
       }
     </ul>
   </div>
 </article>
 <style>
+
+  .iconList {
+    width: 16px;
+    font-size: 0.875rem;
+  }
 
   .card {
     display: flex;
