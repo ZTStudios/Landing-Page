@@ -3,7 +3,7 @@ import ContentNormal from "../layouts/ContentNormal.astro"
 import CardPlans from "../components/CardPlans.astro"
 ---
 
-<section class="backgroundMain">
+<section class="backgroundMain" id="cotizaciones">
   <div class="blurCircle" />
   <ContentNormal>
     <h1 class="titleCotizaciones">Implementa soluciones digitales, incrementa tu presencia en internet o documenta tu equipo</h1>
@@ -19,6 +19,21 @@ import CardPlans from "../components/CardPlans.astro"
         active={true}
       />
       <CardPlans 
+        title="Tienda en linea"
+        description="Potencia tu presencia online y maximiza tus ventas con tu eCommerce personalizado."
+        active={false}
+      />
+      <CardPlans 
+      title="Diseña tu logo"
+      description="Creamos identidades visuales impactantes, déjanos plasmar la esencia de tu negocio."
+      active={false}
+      />
+      <CardPlans 
+      title="Branding"
+      description="Destaca y crea una marca que perdure en la mente de tus clientes."
+      active={false}
+      />
+      <CardPlans 
         title="Capacitacion"
         description="Introduccion a tecnologias que podrias implementar, para seguir actualizando."
         active={false}
@@ -30,7 +45,6 @@ import CardPlans from "../components/CardPlans.astro"
   .backgroundMain {
     position: relative;
     width: 100%;
-    height: 100dvh;
     display: flex;
     justify-content: center;
     background-color: #03021B;
@@ -41,7 +55,7 @@ import CardPlans from "../components/CardPlans.astro"
   .blurCircle {
     position: absolute;
     width: 80%;
-    height: 35%;
+    height: 25%;
     border-radius: 681px;
     background: #652AC6;
     filter: blur(350px); 
@@ -49,7 +63,7 @@ import CardPlans from "../components/CardPlans.astro"
 
   .titleCotizaciones {
     margin: 0;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 600;
     line-height: 46px;
     text-wrap: balance;
@@ -59,8 +73,28 @@ import CardPlans from "../components/CardPlans.astro"
 
   .containerCotizaciones {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
   } 
+
+  @media (width < 1366px) {
+    .containerCotizaciones {
+      justify-content: center;
+    }
+  }
+
+  @media (width < 900px) {
+    .titleCotizaciones {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (width < 650px) {
+    .titleCotizaciones {
+      font-size: 1.875rem;
+      line-height: normal;
+    }
+  }
 </style>

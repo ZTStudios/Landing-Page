@@ -5,15 +5,16 @@ import Bento from '../components/Bento.astro';
 import SocialMedia from '../components/SocialMedia.astro';
 import Cotizaciones from './Cotizaciones.astro';
 import Contacto from './Contacto.astro';
+import Footer from './Footer.astro';
 ---
 
-<section class="HomeScreen">
+<section class="HomeScreen" id="inicio">
   <Content>
     <Navbar />
     <div class="infoSection">
       <article class="infoText">
         <h2 class="titleHome">Transforma, mejora y evoluciona</h2>
-        <button class="buttonCotizacion">Solitar tu cotizacion</button>
+        <a href="#cotizaciones" class="buttonCotizacion">Solitar tu cotizacion</a>
       </article>
       <Bento />
     </div>
@@ -22,10 +23,10 @@ import Contacto from './Contacto.astro';
 </section>
 <Cotizaciones />
 <Contacto />
+<Footer />
 <style>
   .HomeScreen {
     width: 100%;
-    height: 100dvh;
     display: flex;
     justify-content: center;
     background-image: url('../assets/background.svg');
@@ -62,8 +63,38 @@ import Contacto from './Contacto.astro';
     color: black;
     background: linear-gradient(90deg, #DFE9F3 0%, #FFF 100%);
     box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.15rem;
     width: fit-content;
+    cursor: pointer;
+  }
+
+  @media (width < 900px) {
+
+    .infoText {
+      width: 100%;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .titleHome {
+      width: 100%;
+      max-width: 20ch;
+      text-align: center;
+      line-height: normal;
+      font-size: 3.5rem;
+    }
+    .infoSection {
+      width: 100%;
+      flex-direction: column;
+      height: fit-content;
+    }
+
+  }
+
+  @media (width < 600px) {
+    .titleHome {
+      font-size: 3rem;
+    }
   }
 </style>

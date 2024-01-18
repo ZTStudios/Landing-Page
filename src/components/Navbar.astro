@@ -1,15 +1,32 @@
+---
+import { Home, Rocket, MessageCircle } from "lucide-astro";
+---
 <nav>
   <div class="logo">
     <img alt="logo" src="/zt-studios.svg" width="30px" />
     <span>ZT Studios</span>
   </div>
   <ul class="navigationOptions">
-    <li>Inicio</li>
-    <li>Cotizaciones</li>
-    <li>Contacto</li>
-    <li>Sobre nosotros</li>
+    <li>
+      <a class="item" href="#inicio">
+        <Home class="icon" />
+        <span>Inicio</span>
+      </a>
+    </li>
+    <li>
+      <a class="item" href="#cotizaciones">
+        <Rocket class="icon" />
+        Cotizaciones
+      </a>
+    </li>
+    <li>
+      <a class="item" href="#contacto">
+        <MessageCircle class="icon" />
+        Contacto
+      </a>
+    </li>
   </ul>
-  <button>Cotizar ya!</button>
+  <a class="buttonCotizar" href="#cotizaciones">Cotizar ya!</a>
 </nav>
 <style>
   nav {
@@ -32,12 +49,12 @@
     width: 30%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 32px;
     font-size: 0.875rem;
     font-weight: 500;
   }
 
-  button {
+  .buttonCotizar {
     border-radius: 50px;
     background: linear-gradient(90deg, #DFE9F3 0%, #FFF 100%);
     color: black;
@@ -45,5 +62,23 @@
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 12px;
+    cursor: pointer;
+  }
+
+  .item  {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    width: 1rem;
+  }
+
+  @media (width < 550px) {
+    .navigationOptions {
+      display: none;
+    }
   }
 </style>

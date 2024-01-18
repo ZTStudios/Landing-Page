@@ -1,0 +1,57 @@
+---
+import { Github, Facebook, Instagram } from 'simple-icons-astro'
+---
+
+<footer>
+  <section>
+    <img src="zt-studios-white.svg" />
+    <div class="containerIcons">
+      <a href="https://github.com/ZTStudios" target="_blank">
+        <Github class="icon" />
+      </a>
+      <div class="line"/>
+      <a href="https://www.facebook.com/profile.php?id=100090913550392" target="_blank">
+        <Facebook class="icon" />
+      </a>
+      <div class="line"/>
+      <a>
+        <Instagram class="icon" />
+      </a>
+    </div>
+  </section>
+</footer>
+<style>
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 20px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .icon {
+    width: 1rem;
+  }
+
+  .containerIcons {
+    display: flex;
+    gap: 12px;
+  }
+
+  .line {
+    width: 1px;
+    height: auto;
+    background-color: white;
+    border-radius: 1px;
+  }
+</style>
