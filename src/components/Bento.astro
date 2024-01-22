@@ -1,29 +1,47 @@
+
 <section class="bento">
   <div class="glass uiDesignCard">
-    <article class="contentBentoCard">
+    <article class="contentBentoCard  cardIcon">
+      <span>
+        <img src="/src/assets/ui.png" class="icon" />
+      </span>
       <div>
-        <img src="../assets/cloud.svg"  alt="icon"/>
+        <h5>Diseño UI / UX</h5>
+        <p>Tenemos un equipo especializado para construir con las mejores tecnicas visuales y productivas para ti.</p>
       </div>
-      <h5>Diseño UI / UX</h5>
-      <p>Tenemos un equipo especializado para construir con las mejores tecnicas visuales y productivas para ti.</p>
     </article>
   </div>
   <div class="glass supportCard">
-    <article class="contentBentoCard">
-      <h5>Soporte Tecnico</h5>
-      <p>Cualquier problema, o duda nosotros te atendemos.</p>
+    <article class="contentBentoCard cardIcon">
+      <div>
+        <img alt="support" src="/src/assets/chat.png" class="icon" />
+      </div>
+      <div>
+        <h5>Soporte Tecnico</h5>
+        <p>Cualquier problema, o duda nosotros te atendemos.</p>
+      </div>
     </article>
   </div>
   <div class="glass cloudCard">
-    <article class="contentBentoCard">
-      <h5>Alojamiento en la nube</h5>
-      <p>No necesitas infraestructura, nosotros nos hacemos cargo.</p>
+    <article class="contentBentoCard cardIcon">
+      <span>
+        <img alt="cloudIcon" src="/src/assets/cloud.png" />
+      </span>
+      <div>
+        <h5>Cloud hosting</h5>
+        <p>No necesitas infraestructura, nosotros nos hacemos cargo.</p>
+      </div>
     </article>
   </div>
   <div class="glass capacitacionCard">
-    <article class="contentBentoCard">
-      <h5>Capacitacion</h5>
-      <p>Sesiones de tecnologia, herramientas y software.</p>
+    <article class="contentBentoCard cardIcon">
+      <div>
+        <img alt="capacitacion" src="/src/assets/capacitacion.png" class="iconVertical" />
+      </div>
+      <div>
+        <h5>Capacitacion</h5>
+        <p>Sesiones de tecnologia, herramientas y software.</p>
+      </div>
     </article>
   </div>
   <div class="glass desktopCard">
@@ -40,8 +58,12 @@
   </div>
 </section>
 <style>
+
+  .test {
+    display: flex;
+  }
   .bento {
-    width: 55%;
+    width: 60%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -57,12 +79,35 @@
     flex-direction: column;
     justify-content: center;
     padding: 12px;
+    position: relative;
+  }
+
+  .cardIcon {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+    .glass {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(22.5px);
+  }
+
+  .icon {
+    width: 50px;
+  }
+
+  .iconVertical {
+    width: 35px;
   }
 
   h5 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: white;
     line-height: 24px;
+    font-weight: 500;
   }
 
   p {
@@ -99,16 +144,35 @@
     grid-column: 1/3;
   }
 
+  .desktopCard > article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .desktopCard > article > p {
+    text-align: center;
+    max-width: 40ch;
+  }
+
   .mobileCard {
     grid-row: 2 / 6;
     grid-column: 3/5;
   }
 
-  .glass {
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.01);
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(22.5px);
+  .mobileCard > article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .mobileCard > article > p {
+    text-align: center;
+    max-width: 40ch;
   }
 
   @media (width < 900px) {
