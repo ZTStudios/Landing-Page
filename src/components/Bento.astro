@@ -1,21 +1,42 @@
 <section class="bento">
   <div class="glass uiDesignCard">
-
+    <article class="contentBentoCard">
+      <div>
+        <img src="../assets/cloud.svg"  alt="icon"/>
+      </div>
+      <h5>Diseño UI / UX</h5>
+      <p>Tenemos un equipo especializado para construir con las mejores tecnicas visuales y productivas para ti.</p>
+    </article>
   </div>
   <div class="glass supportCard">
-
+    <article class="contentBentoCard">
+      <h5>Soporte Tecnico</h5>
+      <p>Cualquier problema, o duda nosotros te atendemos.</p>
+    </article>
   </div>
   <div class="glass cloudCard">
-
+    <article class="contentBentoCard">
+      <h5>Alojamiento en la nube</h5>
+      <p>No necesitas infraestructura, nosotros nos hacemos cargo.</p>
+    </article>
   </div>
   <div class="glass capacitacionCard">
-
+    <article class="contentBentoCard">
+      <h5>Capacitacion</h5>
+      <p>Sesiones de tecnologia, herramientas y software.</p>
+    </article>
   </div>
   <div class="glass desktopCard">
-
+    <article class="contentBentoCard">
+      <h5>Desarrollo multiplataforma</h5>
+      <p>Es importante acceder a nuestros sistemas desde donde sea, por ello nuestros desarrollos son multiplataformas</p>
+    </article>
   </div>
   <div class="glass mobileCard">
-
+    <article class="contentBentoCard">
+      <h5>Desarrollos Responsivos</h5>
+      <p>Visualiza, gestiona e interactua desde la comodidad de tu dispositivo movil!</p>
+    </article>
   </div>
 </section>
 <style>
@@ -27,6 +48,30 @@
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 8px;
     grid-row-gap: 8px;
+  }
+
+  .contentBentoCard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    color: white;
+    line-height: 24px;
+  }
+
+  p {
+    color: #DEDEDE;
+    font-family: Onest;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
   }
 
   .uiDesignCard {
