@@ -14,7 +14,7 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
         <div class="infoContainer">
           <h3 class="titleInfo">Desata el potencial con un desarrollo a la personalizado para ti</h3>
           <section>
-            <h5 class="subtitle">Tambien nos puedes contactar en:</h5>
+            <span class="subtitle">Tambien nos puedes contactar en:</span>
             <div class="iconsContent">
               <div class="iconData">
                 <Mail />
@@ -33,30 +33,30 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
       </aside>
       <article class="cardContact">
         <header>
-          <h6 class="titleForm">Te contactamos nosotros</h6>
+          <span class="titleForm">Te contactamos nosotros</span>
           <p class="subtitleForm">Llena el siguiente formulario, para poder comunicarnos contigo.</p>
         </header>
         <div />
         <form class="formContainer" action="mailto:bryanturriti@gmail.com">
           <div class="entryInfoContainer">
             <label for="nombre">Nombre</label>
-            <input name="nombre" placeholder="Ingresa tu nombre"/>
+            <input id="nombre" name="nombre" placeholder="Ingresa tu nombre"/>
           </div>
           <div class="entryInfoContainer">
             <label for="apellido">Apellido</label>
-            <input name="apellido" placeholder="Ingresa tu apellido"/>
+            <input id="apellido" name="apellido" placeholder="Ingresa tu apellido"/>
           </div>
           <div class="entryInfoContainer">
             <label for="telefono">Telefono</label>
-            <input name="telefono" placeholder="Ingresa tu numero telefonico"/>
+            <input id="telefono" name="telefono" placeholder="Ingresa tu numero telefonico"/>
           </div>
           <div class="entryInfoContainer">
             <label for="email">Email</label>
-            <input name="email" placeholder="Ingresa tu email"/>
+            <input id="email" name="email" placeholder="Ingresa tu email"/>
           </div>
           <div class="entryInfoContainer">
             <label for="plan">Tipo de cotizacion</label>
-            <select name="plan" aria-label="plan">
+            <select id="plan" name="plan" aria-label="plan">
               <option disabled selected value="">Selecciona un plan</option>
               <option>Landing Page</option>
               <option>Desarrollo a medida</option>
@@ -138,7 +138,7 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
   }
 
   .subtitle {
-    color: #AAA9AB;
+    color: #d4d4d4;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
