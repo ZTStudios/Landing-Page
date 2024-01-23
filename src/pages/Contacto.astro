@@ -36,33 +36,33 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
           <p class="subtitleForm">Llena el siguiente formulario, para poder comunicarnos contigo.</p>
         </header>
         <div />
-        <form class="formContainer">
+        <form class="formContainer" action="mailto:bryanturriti@gmail.com">
           <div class="entryInfoContainer">
             <label>Nombre</label>
-            <input  placeholder="Ingresa tu nombre"/>
+            <input name="nombre" placeholder="Ingresa tu nombre"/>
           </div>
           <div class="entryInfoContainer">
             <label>Apellido</label>
-            <input  placeholder="Ingresa tu nombre"/>
+            <input name="apellido" placeholder="Ingresa tu apellido"/>
           </div>
           <div class="entryInfoContainer">
             <label>Telefono</label>
-            <input  placeholder="Ingresa tu nombre"/>
+            <input name="telefono" placeholder="Ingresa tu numero telefonico"/>
           </div>
           <div class="entryInfoContainer">
             <label>Email</label>
-            <input  placeholder="Ingresa tu nombre"/>
+            <input name="email" placeholder="Ingresa tu email"/>
           </div>
           <div class="entryInfoContainer">
             <label>Tipo de cotizacion</label>
-            <select>
+            <select name="plan">
               <option disabled selected value="">Selecciona un plan</option>
               <option>Landing Page</option>
               <option>Desarrollo a medida</option>
               <option>Capacitacion</option>
             </select>
           </div>
-          <button>Solicitar Cotizacion</button>
+          <button type="submit" name="submit" value="Submit">Solicitar Cotizacion</button>
         </form>
       </article>
     </section>
