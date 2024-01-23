@@ -1,9 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import uiDesign from "../assets/ui.png";
+import chat from "../assets/chat.png";
+import cloud from "../assets/cloud.png";
+import capcacitacion from "../assets/capacitacion.png";
+import devices from "../assets/Devices.webp";
+import phone from "../assets/Phone.webp";
+---
 
 <section class="bento">
   <div class="glass uiDesignCard">
     <article class="contentBentoCard  cardIcon">
       <span>
-        <img alt="uidesignIcon" src="/src/assets/ui.png" class="icon" />
+        <img alt="uidesignIcon" src={uiDesign.src} class="icon" />
       </span>
       <div>
         <h5>Diseño UI / UX</h5>
@@ -14,7 +23,7 @@
   <div class="glass supportCard">
     <article class="contentBentoCard cardIcon">
       <div>
-        <img alt="support" src="/src/assets/chat.png" class="icon" />
+        <img alt="support" src={chat.src} class="icon" />
       </div>
       <div>
         <h5>Soporte Tecnico</h5>
@@ -25,7 +34,7 @@
   <div class="glass cloudCard">
     <article class="contentBentoCard cardIcon">
       <span>
-        <img alt="cloudIcon" src="/src/assets/cloud.png" />
+        <img alt="cloudIcon" src={cloud.src} />
       </span>
       <div>
         <h5>Cloud hosting</h5>
@@ -36,7 +45,7 @@
   <div class="glass capacitacionCard">
     <article class="contentBentoCard cardIcon">
       <div>
-        <img alt="capacitacion" src="/src/assets/capacitacion.png" class="iconVertical" />
+        <img alt="capacitacion" src={capcacitacion.src} class="iconVertical" />
       </div>
       <div>
         <h5>Capacitacion</h5>
@@ -51,7 +60,7 @@
         <p>Es importante acceder a nuestros sistemas desde donde sea, por ello nuestros desarrollos son multiplataformas</p>
       </div>
       <div>
-        <img id="devices" alt="devices" src="/src/assets/Devices.webp" />
+        <img id="devices" alt="devices" src={devices.src} />
       </div>
     </article>
   </div>
@@ -62,7 +71,7 @@
         <p>Visualiza, gestiona e interactua desde la comodidad de tu dispositivo movil!</p>
       </div>
       <div>
-        <img id="phone" alt="phone" src="/src/assets/Phone.webp" />
+        <img id="phone" alt="phone" src={phone.src} />
       </div>
     </article>
   </div>
