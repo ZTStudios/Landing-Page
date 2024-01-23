@@ -5,6 +5,8 @@ import CardPlans from "../components/CardPlans.astro"
 
 <section class="backgroundMain" id="cotizaciones">
   <div class="blurCircle" />
+  <div class="blurCircle" style="bottom: 0; left:0; filter: blur(255px); width: 25%;"/>
+  <div class="blurCircle" style="bottom: 0; right:0; filter: blur(255px); width: 25%;"/>
   <ContentNormal>
     <h1 class="titleCotizaciones">Implementa soluciones digitales, incrementa tu presencia en internet o documenta tu equipo</h1>
     <section class="containerCotizaciones">
@@ -50,6 +52,7 @@ import CardPlans from "../components/CardPlans.astro"
     background-color: #03021B;
     background-image: radial-gradient(#19112f 1.4000000000000001px, #03021B 1.4000000000000001px);
     background-size: 28px 28px;
+    padding-bottom: 2rem;
   }
 
   .blurCircle {
@@ -79,7 +82,7 @@ import CardPlans from "../components/CardPlans.astro"
     gap: 24px;
   } 
 
-  @media (width < 1366px) {
+  @media (width <= 1366px) {
     .containerCotizaciones {
       justify-content: center;
     }

@@ -5,8 +5,9 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
 ---
 
 <section class="backgroundMain" id="contacto">
-  <div class="blurCircle" style="left: -150px; bottom: 0px;" />
-  <div class="blurCircle" style="right: -150px; bottom: 0px;" />
+  <div class="blurCircle" style="left: -20px; top: 58px" />
+  <div class="blurCircle" style="right: -20px; top: 58px" />
+  <div class="blurCircle" style="bottom: 0;" />
   <ContentNormal>
     <section class="containeMain">
       <aside class="infoContainer">
@@ -78,6 +79,7 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
   .backgroundMain {
     position: relative;
     width: 100%;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     padding: 1rem;
@@ -94,8 +96,7 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
     height: 35%;
     border-radius: 681px;
     background: #652AC6;
-    filter: blur(500px); 
-    z-index: 2;
+    filter: blur(270px); 
   }
 
   .containeMain {

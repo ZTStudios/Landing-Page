@@ -51,7 +51,7 @@
         <p>Es importante acceder a nuestros sistemas desde donde sea, por ello nuestros desarrollos son multiplataformas</p>
       </div>
       <div>
-        <img alt="devices" src="/src/assets/Devices.webp" />
+        <img id="devices" alt="devices" src="/src/assets/Devices.webp" />
       </div>
     </article>
   </div>
@@ -62,7 +62,7 @@
         <p>Visualiza, gestiona e interactua desde la comodidad de tu dispositivo movil!</p>
       </div>
       <div>
-        <img alt="phone" src="/src/assets/Phone.webp" />
+        <img id="phone" alt="phone" src="/src/assets/Phone.webp" />
       </div>
     </article>
   </div>
@@ -166,6 +166,7 @@
   .desktopCard > article > div > p {
     text-align: center;
     max-width: 40ch;
+    text-wrap: pretty;
   }
 
   .mobileCard {
@@ -185,9 +186,36 @@
   .mobileCard > article > div > p {
     text-align: center;
     max-width: 40ch;
+    text-wrap: pretty;
   }
 
-  @media (width < 900px) {
+  @media (width <= 1700px) {
+
+    .desktopCard > article > div > h5 {
+      text-align: center;
+    }
+
+    .mobileCard > article > div > h5 {
+      text-align: center;
+      text-wrap: nowrap;
+    }
+
+    #devices {
+      width: 60%;
+    }
+
+    #phone {
+      width: 60%;
+    }
+  }
+
+  @media (width < 1600px) {
+    .mobileCard > article > div > h5 {
+      text-wrap: balance;
+    }
+  }
+
+  @media (width < 1366px) {
     .bento {
       display: none;
     }
