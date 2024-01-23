@@ -62,6 +62,7 @@ import { Home, Rocket, MessageCircle } from "lucide-astro";
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 12px;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
 
@@ -72,8 +73,20 @@ import { Home, Rocket, MessageCircle } from "lucide-astro";
     align-items: center;
   }
 
+  .item:hover {
+    color: #89C0E9;
+  }
+
   .icon {
     width: 1rem;
+  }
+
+  .buttonCotizar:hover {
+    border: 0.5px solid #652AC6;
+    background: linear-gradient(90deg, #652AC6 0%, #B14DFF 100%);
+    box-shadow: 0px 0px 50px 0px #652AC6;
+    color: #DEDEDE;
+    transform: translateY(3px);
   }
 
   @media (width < 550px) {

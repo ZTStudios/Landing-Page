@@ -26,7 +26,7 @@ let optionsToShow = []
 title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow = optionsCotizacion
 ---
 
-<article class=`card ${active ? 'cardActive' : ''}`>
+<article class=`card`>
   <div class="contentInfo">
     <div class="containerHeader">
       <h3 class="titleCard">{title}</h3>
@@ -40,7 +40,7 @@ title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow =
         <h5 class="cotizacionSmall">Cotizacion</h5>
         <h2 class="cotizacionBig">Gratuita</h2>
       </div>
-      <button class={`button ${active ? 'buttonActive' : 'buttonInactive' }`}>Solicitar mi cotizacion</button>
+      <button class={`button buttonInactive`}>Solicitar mi cotizacion</button>
     </div>
     <ul>
       {
@@ -67,6 +67,12 @@ title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow =
     border: 1px solid #1C173C;
     background: rgba(69, 69, 69, 0.14);
     backdrop-filter: blur(15px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    border: 1px solid #672AC7;
+    box-shadow: 0px 4px 20px 5px rgba(171, 75, 250, 0.25);    
   }
 
   .cardActive {
@@ -135,14 +141,15 @@ title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow =
     padding: 10px 0px;
     border-radius: 8px;
     font-weight: 500;
+    transition: all 0.2s ease-in-out;
     font-size: 0.875rem;
   }
-
-  .buttonActive {
+  .button:hover {
     border: 0.5px solid #652AC6;
     background: linear-gradient(90deg, #652AC6 0%, #B14DFF 100%);
     box-shadow: 0px 0px 50px 0px #652AC6;
     color: #DEDEDE;
+    transform: translateY(2px);
   }
 
   .buttonInactive {
