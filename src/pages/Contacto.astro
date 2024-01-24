@@ -2,8 +2,22 @@
 import ContentNormal from "../layouts/ContentNormal.astro"
 import { Mail } from "lucide-astro";
 import { Facebook, Whatsapp } from "simple-icons-astro";
----
 
+const API_KEY = '3fd46e9a-63f9-4963-a1ac-f76aacb44cc9'
+---
+<script>
+  async function handleSendEmail (event) {
+  event.preventDefault()
+  console.log('Hola')
+  const form = document.querySelector('#formEmail') as HTMLFormElement
+  const formData = new FormData(form)
+  // console.log(formData)
+  const response = await fetch('https://api.web3forms.com/submit', {method: 'POST', body: formData})
+  console.log(response)
+
+}
+document.querySelector('#buttonEmail').addEventListener('click', handleSendEmail)
+</script>
 <section class="backgroundMain" id="contacto">
   <div class="blurCircle" style="left: -20px; top: 58px" />
   <div class="blurCircle" style="right: -20px; top: 58px" />
@@ -37,33 +51,35 @@ import { Facebook, Whatsapp } from "simple-icons-astro";
           <p class="subtitleForm">Llena el siguiente formulario, para poder comunicarnos contigo.</p>
         </header>
         <div />
-        <form class="formContainer" action="mailto:bryanturriti@gmail.com">
+        <form class="formContainer" id="formEmail">
+          <input type="hidden" name="access_key" value={API_KEY} >
           <div class="entryInfoContainer">
             <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" placeholder="Ingresa tu nombre"/>
+            <input id="nombre" name="nombre" placeholder="Ingresa tu nombre" type="text" required/>
           </div>
           <div class="entryInfoContainer">
             <label for="apellido">Apellido</label>
-            <input id="apellido" name="apellido" placeholder="Ingresa tu apellido"/>
+            <input id="apellido" name="apellido" placeholder="Ingresa tu apellido" type="text" required/>
           </div>
           <div class="entryInfoContainer">
             <label for="telefono">Telefono</label>
-            <input id="telefono" name="telefono" placeholder="Ingresa tu numero telefonico"/>
+            <input id="telefono" name="telefono" placeholder="Ingresa tu numero telefonico" type="tel" required/>
           </div>
           <div class="entryInfoContainer">
             <label for="email">Email</label>
-            <input id="email" name="email" placeholder="Ingresa tu email"/>
+            <input id="email" type="email" name="email" placeholder="Ingresa tu email" required />
           </div>
           <div class="entryInfoContainer">
             <label for="plan">Tipo de cotizacion</label>
-            <select id="plan" name="plan" aria-label="plan">
+            <select id="plan" name="plan" aria-label="plan" required>
               <option disabled selected value="">Selecciona un plan</option>
               <option>Landing Page</option>
               <option>Desarrollo a medida</option>
               <option>Capacitacion</option>
             </select>
           </div>
-          <button type="submit" name="submit" value="Submit">Solicitar Cotizacion</button>
+          <div class="h-captcha" data-captcha="true"></div>
+          <button type="submit" name="submit" id="buttonEmail">Solicitar Cotizacion</button>
         </form>
       </article>
     </section>
