@@ -1,10 +1,11 @@
 ---
 import { Github, Facebook, Instagram } from 'simple-icons-astro'
+import ZTStudios from '../../public/zt-studios-white.svg'
 ---
 
 <footer>
   <section>
-    <img alt="ztstudios" src="zt-studios-white.svg" width="30px" height="40px" />
+    <img alt="ztstudios" src={ZTStudios.src} width="30px" height="40px" />
     <div class="containerIcons">
       <a href="https://github.com/ZTStudios" target="_blank">
         <Github class="icon" />
