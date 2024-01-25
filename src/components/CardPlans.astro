@@ -1,6 +1,6 @@
 ---
   import { Check } from 'lucide-astro'
-  const { title, description, options, active } = Astro.props
+  const { title, description, } = Astro.props
 
   const optionsCapacitacion = [
     'Diseño UI / UX',
@@ -21,9 +21,31 @@
   'Dominio personalizado'
 ]
 
-let optionsToShow = []
+  const optionsBrandingPremium = [
+    'Brand board',
+    'Mood board',
+    'Paleta de color',
+    'Tipografias',
+    'Logo principal',
+    'Logo secundario',
+    'Icono',
+    'Marcas de agua',
+    'Fondos de color'
+  ]
 
-title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow = optionsCotizacion
+  const optionsBrandingBasico = [
+    'Diesño de Logo',
+    'Tarjeta de presentacion',
+    'Portada de Facebook',
+    'Hoja membretada'
+  ]
+
+let optionsToShow = []
+  if (title === 'Branding Basico' || title === 'Branding Premium') {
+    title === 'Branding Basico' ? optionsToShow = optionsBrandingBasico : optionsToShow = optionsBrandingPremium
+  } else {
+    title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow = optionsCotizacion
+  }
 ---
 
 <article class=`card`>
