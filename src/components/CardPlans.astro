@@ -40,7 +40,7 @@ title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow =
         <span class="cotizacionSmall">Cotizacion</span>
         <h2 class="cotizacionBig">Gratuita</h2>
       </div>
-      <button class={`button buttonInactive`}>Solicitar mi cotizacion</button>
+      <a class={`button buttonInactive`} href="#contacto" >Solicitar mi cotizacion</a>
     </div>
     <ul>
       {
@@ -138,6 +138,9 @@ title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow =
 
   .button {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 0px;
     border-radius: 8px;
     font-weight: 500;
