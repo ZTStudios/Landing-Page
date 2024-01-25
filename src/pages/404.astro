@@ -1,3 +1,124 @@
+---
+  import ZTStudios from '../../public/zt-studios.svg'
+  import planet from '../assets/planet.webp'
+  import { ChevronLeft } from 'lucide-astro';
+---
+
 <main>
-  <p>Hola</p>
+  <div class="blurCircle" style="top: 0;" />
+  <div class="blurCirclePurple" />
+  <section class="pictureBox">
+    <div class="errorBox">
+      <div class="logo">
+        <img alt="logo" src={ZTStudios.src} width="50px" height="60px" />
+      </div>
+      <p>Ups, aqui no hay nada que ver</p>
+      <h1>404</h1>
+    </div>
+      <img src={planet.src} alt="planetZT" />
+    <a><ChevronLeft /> Regresar al inicio</a>
+  </section>
 </main>
+<style>
+  main {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #03021B;
+    background-image: radial-gradient(#19112f 1.4000000000000001px, #03021B 1.4000000000000001px);
+    background-size: 28px 28px;
+  }
+
+  .blurCircle {
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    border-radius: 681px;
+    background: #652AC6;
+    filter: blur(350px); 
+  }
+
+  .blurCirclePurple {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    border-radius: 681px;
+    background: #dd27db;
+    filter: blur(200px); 
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  p {
+    color: #E1E1E1;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+  }
+  h1 {
+    color: #FFF;
+    text-shadow: 12px 24px 4px rgba(0, 0, 0, 0.25);
+    font-size: 12rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12rem;
+    position: relative;
+    text-align: center;
+  }
+
+  .pictureBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .planet {
+    
+    box-shadow: -36.048px 22.679px 155.725px 0px rgba(85, 2, 76, 0.80);
+  }
+
+  .errorBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -150px;
+  }
+
+  a {
+    width: fit-content;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 50px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #DFE9F3 0%, #FFF 100%);
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    color: black;
+    font-size: 0.875rem;
+  }
+
+</style>
