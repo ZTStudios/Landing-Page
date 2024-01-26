@@ -21,11 +21,11 @@
   'Dominio personalizado'
 ]
 
-  const optionsBrandingPremium = [
+  const optionsBrandingBasico = [
     'Brand board',
     'Mood board',
     'Paleta de color',
-    'Tipografias',
+    'Tipografías',
     'Logo principal',
     'Logo secundario',
     'Icono',
@@ -33,18 +33,19 @@
     'Fondos de color'
   ]
 
-  const optionsBrandingBasico = [
-    'Diesño de Logo',
-    'Tarjeta de presentacion',
+  const optionsBrandingPremium = [
+    'Plan Básico',
+    'Diseño de Logo',
+    'Tarjeta de presentación',
     'Portada de Facebook',
     'Hoja membretada'
   ]
 
 let optionsToShow = []
-  if (title === 'Branding Basico' || title === 'Branding Premium') {
-    title === 'Branding Basico' ? optionsToShow = optionsBrandingBasico : optionsToShow = optionsBrandingPremium
+  if (title === 'Branding Básico' || title === 'Branding Premium') {
+    title === 'Branding Básico' ? optionsToShow = optionsBrandingBasico : optionsToShow = optionsBrandingPremium
   } else {
-    title === "Capacitacion" ? optionsToShow = optionsCapacitacion : optionsToShow = optionsCotizacion
+    title === "Capacitación" ? optionsToShow = optionsCapacitacion : optionsToShow = optionsCotizacion
   }
 ---
 
@@ -59,10 +60,10 @@ let optionsToShow = []
     </div>
     <div class="containerBody">
       <div>
-        <span class="cotizacionSmall">Cotizacion</span>
+        <span class="cotizacionSmall">Cotización</span>
         <h2 class="cotizacionBig">Gratuita</h2>
       </div>
-      <a class={`button buttonInactive`} href="#contacto" >Solicitar mi cotizacion</a>
+      <a class={`button buttonInactive`} href="#contacto" >Solicitar mi cotización</a>
     </div>
     <ul>
       {

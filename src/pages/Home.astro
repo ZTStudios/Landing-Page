@@ -15,7 +15,7 @@ import Error from './404.astro'
     <div class="infoSection">
       <article class="infoText">
         <h2 class="titleHome">Transforma, mejora y evoluciona</h2>
-        <a href="#cotizaciones" class="buttonCotizacion">Solitar tu cotizacion</a>
+        <a href="#cotizaciones" class="buttonCotizacion">Solicitar tu cotización</a>
       </article>
       <Bento />
     </div>
@@ -78,7 +78,14 @@ import Error from './404.astro'
     transform: translateY(3px);
   }
 
-  @media (width < 1366px) {
+  @media (width < 1600px) {
+    .infoSection {
+      gap: 12px;
+      height: 75%;
+    }
+  }
+
+  @media (width <= 1366px) {
 
     .infoText {
       width: 100%;
