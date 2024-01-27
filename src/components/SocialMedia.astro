@@ -13,7 +13,7 @@ import { Github, Facebook, Instagram } from 'simple-icons-astro'
     </div>
     <ul class="list">
       <li class="item">
-        <span class="nameSocial">@ZT Studios</span>
+        <span class="nameSocial" id="nameBrand">@ZT Studios</span>
       </li>
       <li class="divider" ></li>
       <li class="item">
@@ -88,5 +88,11 @@ import { Github, Facebook, Instagram } from 'simple-icons-astro'
 
   .nameSocial {
     font-size: 0.875rem;
+  }
+
+  @media (width < 700px) {
+    #nameBrand {
+      display: none;
+    }
   }
 </style>
