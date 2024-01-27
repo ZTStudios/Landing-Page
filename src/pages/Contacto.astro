@@ -89,6 +89,10 @@ document.querySelector('#buttonEmail').addEventListener('click', handleSendEmail
     z-index: 1;
   }
 
+  .h-captcha {
+    width: fit-content;
+  }
+
 
   .backgroundMain {
     position: relative;
@@ -100,7 +104,7 @@ document.querySelector('#buttonEmail').addEventListener('click', handleSendEmail
     background-color: #03021B;
     background-image: radial-gradient(#19112f 1.4000000000000001px, #03021B 1.4000000000000001px);
     background-size: 28px 28px;
-    overflow-x: hidden;
+    overflow: hidden;
     z-index: 0;
   }
 
@@ -248,6 +252,13 @@ document.querySelector('#buttonEmail').addEventListener('click', handleSendEmail
   }
 
   @media (width < 600px) {
+    .backgroundMain {
+      height: auto;
+    }
+
+    .subtitle {
+      text-wrap: nowrap;
+    }
     .titleInfo {
       font-size: 2rem;
     }
