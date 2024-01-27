@@ -31,17 +31,11 @@ document.querySelector('#buttonEmail').addEventListener('click', handleSendEmail
           <section>
             <span class="subtitle">También nos puedes contactar en:</span>
             <div class="iconsContent">
-              <div class="iconData">
-                <Mail />
-              </div>
               <a href="https://www.facebook.com/profile.php?id=100090913550392" target="_blank">
                 <div class="iconData" style="background-color: #466dce;">
                   <Facebook />
                 </div>
               </a>
-              <div class="iconData" style="background-color: #57B24F;">
-                <Whatsapp />
-              </div>
             </div>
           </section>
         </div>
@@ -219,6 +213,12 @@ document.querySelector('#buttonEmail').addEventListener('click', handleSendEmail
     box-shadow: 0px 0px 50px 0px #652AC6;
     font-size: 0.875rem;
     font-weight: 500;
+  }
+
+  @media (width <= 1500px) {
+    .titleInfo {
+      max-width: 24ch;
+    }
   }
 
   @media (width < 1366px ) {
